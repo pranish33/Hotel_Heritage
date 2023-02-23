@@ -130,9 +130,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 STATIC_URL = '/static/'
-MEDIA_ROOT = '/home/rolpa_heritage/media'
+MEDIA_ROOT = '/rolpa_heritage/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/rolpa_heritage/static'
+STATIC_ROOT = '/rolpa_heritage/static'
 
 
 # Default primary key field type
