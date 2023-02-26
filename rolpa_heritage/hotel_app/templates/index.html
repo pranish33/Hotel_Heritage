@@ -39,9 +39,20 @@
         <!-- Header Start -->
         <nav class="navbar navbar-expand-lg bg-dark navbar-expand-md sticky-top" data-bs-theme="light">
             <div class="container-fluid">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                
+              <button class="navbar-toggler custom-toggler" type="button text-white" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent " aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation ">
+               
+                <style>
+                    .custom-toggler .navbar-toggler-icon {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(100,63,9, 2)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+                      }
+                      
+                      .custom-toggler.navbar-toggler {
+                        border-color: rgb(100,63,9);
+                      } 
+                </style>
                 <span class="navbar-toggler-icon"></span>
+                
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -79,9 +90,16 @@
                         <img class="w-100" src="{% static 'img/cover.jpg' %}" alt="Image">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-40px" style="max-width: 700px;">
-                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
                                 <h2 class="display-3 text-white mb-2 animated slideInDown">Welcome To </h2>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Hotel Rolpa Heritage</h1>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Rolpa Heritage Hotel</h1>
+                                <h3 class="h3 text-white animated slideInDown" style>Your hospitality partner in Rolpa </h3>
+                                <style>
+                                    .h3{
+                                        font-family:cursive;
+                                    }
+                                    
+                                    </style>
+                                
                             </div>
                         </div>
                     </div>
@@ -130,8 +148,8 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1657</h2>
-                                        <p class="mb-0">Served</p>
+                                        <h2 class="mb-1" data-toggle="counter-up">3959</h2>
+                                        <p class="mb-0">Happy Faces</p>
                                     </div>
                                 </div>
                             </div>
@@ -323,7 +341,7 @@
                         <div class="col-lg-5 pb-4 pb-lg-0">
                             <img class="img-fluid w-100 mt-20" src="{% static 'img/founder.jpg' %}" alt="">
                             <div class="bg-primary text-dark text-center p-4">
-                                <h3 class="m-0">Gyanu Acharya</h3>
+                                <h3 class="m-0">Gyanendra Acharya</h3>
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -356,12 +374,12 @@
                 <div class="col-lg-10 border rounded p-1">
                     <div class="border rounded text-center p-1">
                         <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Review Our <span class="text-primary text-uppercase">Services</span></h4>
+                            <h4 class="mb-4">We Value <span class="text-primary text-uppercase">Suggestions</span></h4>
                         <form method="post">
                                 {% csrf_token %}
                             <div class="position-relative mx-auto" style="max-width: 400px;">
                                 
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Give Your Rating" name="rating_message">
+                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Your Suggestion" name="rating_message">
                                 <button type="submit" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
                             </div>
                             {% for message in messages %}
@@ -391,7 +409,7 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact Us</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Liwang, 04, Rolpa, Rolpa, Nepal</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Rolpa, 04 Liwang, Rolpa, Nepal</p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>086440001 / +977-9857823152</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>rolpaheritage@gmail.com</p>
                         <div class="d-flex pt-2">
