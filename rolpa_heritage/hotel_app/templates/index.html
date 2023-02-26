@@ -52,7 +52,7 @@
                     <a class="nav-link" href="#about">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#rooms">Our Rooms</a>
+                    <a class="nav-link" href="#rooms">Gallery</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#services">Services</a>
@@ -61,7 +61,7 @@
                     <a class="nav-link" href="#testimonials">Testimonials</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#contacts">Contact</a>
+                    <a class="nav-link" href="#contacts">Contact Us</a>
                   </li>
 
                 </ul>
@@ -71,7 +71,7 @@
         <!-- Header End -->
 
 
-        <!-- Carousel Start -->
+        <!-- HomePage -->
         <div class="container-fluid p-0 mb-5">
             <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -80,6 +80,7 @@
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-40px" style="max-width: 700px;">
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Luxury Living</h6>
+                                <h2 class="display-3 text-white mb-2 animated slideInDown">Welcome To </h2>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Hotel Rolpa Heritage</h1>
                             </div>
                         </div>
@@ -88,7 +89,7 @@
                 </div>
             </div>
         </div>
-        <!-- Carousel End -->
+        <!-- HomePage End End -->
 
 
         <!-- About Start -->
@@ -99,13 +100,19 @@
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Hotel Rolpa Heritage</span></h1>
-                        <p class="mb-4">Located in the heart of Liwang, Rolpa, this hotel provides excellent value for money together with fantastic rooms and a fantastic dining experience. Please stay with us so we can treat you with the genuine hospitality of Nepal!</p>
+                        <p class="mb-4">
+                            Established in the center of Libang Town, offering the great value for money with superb
+                            rooms and wonderful dining experience. Tranquilizing area, a minute walk from town center,
+                            beautiful garden, hot and cold water, 24 hour cctv camera for your safety, free WiFi, electricity power
+                            back up. Come and stay with us and allow us to make you feel at home with true Nepalese
+                            hospitality!
+                        </p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up"></h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">11</h2>
                                         <p class="mb-0">Rooms</p>
                                     </div>
                                 </div>
@@ -123,8 +130,8 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">564</h2>
-                                        <p class="mb-0">Clients</p>
+                                        <h2 class="mb-1" data-toggle="counter-up">1657</h2>
+                                        <p class="mb-0">Served</p>
                                     </div>
                                 </div>
                             </div>
@@ -154,101 +161,27 @@
         <!-- About End -->
 
 
-        <!-- Room Start -->
+        
 <!-- Gallery -->
 <section class="rooms" id="rooms">
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title text-center text-primary text-uppercase">Our Rooms</h6>
-                <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Rooms</span></h1>
+                <h6 class="section-title text-center text-primary text-uppercase">Our Gallery</h6>
+                <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Gallery</span></h1>
             </div>
+    </div>
 <div class="row">
+    {% for image in images %}
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <img
-        src="{% static 'img/gallery-1.jpg' %}"
+        src="{{image.image.url}}"
         class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-  
-      <img
-        src="{% static 'img/gallery-2.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Wintry Mountain Landscape"
-      />
+        alt="{{image.title}}"/>
     </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="{% static 'img/gallery-3.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Mountains in the Clouds"
-      />
-  
-      <img
-        src="{% static 'img/gallery-4.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-    </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="{% static 'img/gallery-5.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Waves at Sea"/>
-  
-      <img
-        src="{% static 'img/gallery-6.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Yosemite National Park"
-      />
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="{% static 'img/gallery-7.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-  
-      <img
-        src="{% static 'img/gallery-8.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Wintry Mountain Landscape"
-      />
-    </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="{% static 'img/gallery-9.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Mountains in the Clouds"
-      />
-  
-      <img
-        src="{% static 'img/gallery-10.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-    </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="{% static 'img/gallery-11.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Waves at Sea"/>
-  
-      <img
-        src="{% static 'img/gallery-12.jpg' %}"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Yosemite National Park"
-      />
-    </div>
+    {% endfor %}
   </div>
   <!-- Gallery -->
-        <!-- Room End -->
 
 
     
@@ -270,7 +203,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Rooms</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Hotel room services are designed to enhance the comfort and convenience of guests during their stay. From housekeeping and room service to laundry and concierge services, hotels offer a range of amenities to make guests feel at home. </p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -281,18 +214,24 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Food & Restaurant</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">
+                                We pride ourselves on offering a wide range of delicious dishes to satisfy any appetite. Our menu features fresh, locally-sourced ingredients that are expertly prepared by our skilled chefs.
+                            </p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <a class="service-item rounded">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-spa fa-2x text-primary"></i>
+                                    <i class="fas fa-user-friends fa-2x text-primary"></i>
                                 </div>
                             </div>
                             <h5 class="mb-3">Seminars & Meetings</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">
+                                We offer a range of versatile spaces that are perfect for all types of events, from small business meetings to large conferences and seminars.
+
+
+                            </p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
@@ -303,7 +242,7 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Wifi</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">Our rooms are equipped with state-of-the-art audiovisual technology, high-speed internet, and comfortable seating arrangements to ensure that your event runs smoothly and efficiently.</p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -314,18 +253,22 @@
                                 </div>
                             </div>
                             <h5 class="mb-3">Event & Party</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <p class="text-body mb-0">
+                                Looking to host an event or party? Our hotel offers a range of event spaces to suit any occasion, from intimate gatherings to large-scale celebrations.
+                            </p>
                         </a>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
                         <a class="service-item rounded">
                             <div class="service-icon bg-transparent border rounded p-1">
                                 <div class="w-100 h-100 border rounded d-flex align-items-center justify-content-center">
-                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
+                                    <i class="fas fa-store-alt fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h5 class="mb-3">Wedding Reception</h5>
-                            <p class="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
+                            <h5 class="mb-3">Work/Writing desk/Dressing Table</h5>
+                            <p class="text-body mb-0">
+                                We provides a comfortable and organized workspace where you can focus and be productive, or a dedicated area to get ready for your day.
+                            </p>
                         </a>
                     </div>
                 </div>
@@ -339,147 +282,98 @@
         <section class="testimonials" id="testimonials">
                     <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Testimonials</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">good wills</span></h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Clients</h6>
+                    <h1 class="mb-5">We have <span class="text-primary text-uppercase">Served</span></h1>
                 </div>
+                
                 <div class="row g-4">
-        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+                    
+        <div class="container-xxl testimonial my-2 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+            
             <div class="container">
+                
                 <div class="owl-carousel testimonial-carousel py-8">
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                    {% for client_image in client_images %}
+                    <div class="testimonial-item position-relative bg-white overflow-hidden ">
+                        
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{% static 'img/testimonial-1.png' %}" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Japan Embassy</h6> 
-                            </div>
+                            <img class="flex-shrink-0 rounded" 
+                            src="{{client_image.client_image.url}}" 
+                            alt="{{client_image.client_name}}" 
+                            style="width: 30%; height: 70px;">
                         </div>
-                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                        
                     </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{% static 'img/testimonial-2.jpg' %}" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                
-                            </div>
-                        </div>
-                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-                    </div>
-                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
-        
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="{% static 'img/testimonial-3.jpg' %}" style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                
-                            </div>
-                        </div>
-                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-                    </div>
+                    {% endfor %}
                 </div>
+               
             </div>
+           
         </div>
+        
     </section>
         <!-- Testimonial End -->
 
 
         <!-- Team Start -->
         <section class="teams" id="teams">
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
+            <div class="container-fluid py-100 ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 pb-4 pb-lg-0">
+                            <img class="img-fluid w-100 mt-20" src="{% static 'img/founder.jpg' %}" alt="">
+                            <div class="bg-primary text-dark text-center p-4">
+                                <h3 class="m-0">Gyanu Acharya</h3>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="{% static 'img/team-3.jpg' %}" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src=" {% static 'img/team-4.jpg' %}" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
+                        <div class="col-lg-7">
+                           
+                            <h1 class="mb-4">Message From Founder</h1>
+                            <p class="mb-4">
+                                As the founder of this establishment, I am thrilled to have you as our guest. Our team is dedicated to providing you with a comfortable and enjoyable stay, and we hope that you will feel at home during your time with us.<br>
+
+                                We have worked hard to create a welcoming and relaxing atmosphere, and we have taken great care to ensure that every aspect of your stay is just right. 
+                                From our luxurious accommodations to our exceptional dining options and world-class amenities, we are committed to providing you with an unforgettable experience.<br>
+                                Thank you for choosing to stay with us. We look forward to exceeding your expectations and making your visit truly special.
+                            </p>
+                            <!-- <div class="d-flex align-items-center pt-2">
+                                 <button type="button" class="btn-play" data-toggle="modal"
+                                    data-src="{% static 'https://www.youtube.com/embed/DWRcNpR6Kdc' %}" data-target="#videoModal">
+                                    <span></span>
+                                </button>
+                                <h5 class="font-weight-bold m-0 ml-4">Play Video</h5>
+                            </div> -->
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
         <!-- Team End -->
 
 
-        <!-- Newsletter Start -->
+        <!-- Review Section -->
         <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="row justify-content-center">
                 <div class="col-lg-10 border rounded p-1">
                     <div class="border rounded text-center p-1">
                         <div class="bg-white rounded text-center p-5">
-                            <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                            <h4 class="mb-4">Review Our <span class="text-primary text-uppercase">Services</span></h4>
+                        <form method="post">
+                                {% csrf_token %}
                             <div class="position-relative mx-auto" style="max-width: 400px;">
-                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
-                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
+                                
+                                <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Give Your Rating" name="rating_message">
+                                <button type="submit" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>
                             </div>
+                            {% for message in messages %}
+                             <h4>{{ message }}</h4>
+                            {% endfor %}
+                        </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Newsletter Start -->
+        <!-- Review Section End -->
         
 
         <!-- Footer Start -->
@@ -489,20 +383,20 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
-                            <a href="index.html"><h1 class="text-white text-uppercase mb-3">Hotel Rolpa Heritage</h1></a>
+                            <a href="index.html"><h3 class="text-white text-uppercase mb-3">Travel With One Himalayan Adventure Team</h3></a>
                             <p class="text-white mb-0">
-								Download <a class="text-dark fw-medium" href="">Hotel Rolpa Heritage</a>, we are here to help you
+								We are proudly associates with <a class="text-dark fw-medium" href="http://www.onehimalayanadventure.com/">One Himalayan Adventure </a>We are also working together with One Himalayan Adventure Pvt. Ltd., Kathmandu.
 							</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3">
-                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact Us</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Liwang, 04, Rolpa, Rolpa, Nepal</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>086440001 / +977-9857823152</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>rolpaheritage@gmail.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=100050519636528"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
@@ -513,13 +407,17 @@
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <a class="btn btn-link" href="#about">About Us</a>
                                 <a class="btn btn-link" href="#contact">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
+                                <a class="btn btn-link">Privacy Policy</a>
+                                <a class="btn btn-link">Terms & Condition</a>
                             </div>
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="">Food & Restaurant</a>
-                                <a class="btn btn-link" href="">Event & Party</a>
+                                <a class="btn btn-link">Food & Restaurant</a>
+                                <a class="btn btn-link">Event & Party</a>
+                                <a class="btn btn-link">Wifi</a>
+                                <a class="btn btn-link">Seminars & Meetings</a>
+                                <a class="btn btn-link">Telephone</a>
+                                <a class="btn btn-link">Toiletries</a>
                             </div>
                         </div>
                     </div>
@@ -532,14 +430,14 @@
                             &copy; <a class="border-bottom" href="#">Rolpa Heritage Hotel</a>, All Right Reserved. 
 							
 
-							Designed By <a class="border-bottom" href="https://pranish.pythonanywhere.com/">Pranish Acharya</a>
+							Designed and Developed By <a class="border-bottom" href="https://pranish.pythonanywhere.com/" target="blank">Pranish Acharya</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
                                 <a href="#">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a>Cookies</a>
+                                <a>Help</a>
+                                <a>FQAs</a>
                             </div>
                         </div>
                     </div>

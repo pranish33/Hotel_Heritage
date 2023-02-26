@@ -211,7 +211,7 @@
 }
 
 
-/*** Youtube Video ***/
+/* ** Youtube Video **
 .video {
     position: relative;
     height: 100%;
@@ -285,7 +285,7 @@
     border-left: 32px solid var(--dark);
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
-}
+} */
 
 @keyframes pulse-border {
     0% {
@@ -299,7 +299,7 @@
     }
 }
 
-#videoModal {
+/* #videoModal {
     z-index: 99999;
 }
 
@@ -326,7 +326,7 @@
     color: #FFFFFF;
     background: #000000;
     opacity: 1;
-}
+} */
 
 
 /*** Testimonial ***/
@@ -362,10 +362,10 @@
     position: relative;
     width: 40px;
     height: 40px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #f8f4f4;
     background: var(--primary);
     border-radius: 2px;
     font-size: 18px;
