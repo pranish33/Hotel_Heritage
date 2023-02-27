@@ -16,4 +16,5 @@ def index(request):
         index = Rating(rating_message=rating_message)
         index.save()
         messages.info(request,'Thank you for your review!!')
+    
     return render(request, 'index.html', context)
