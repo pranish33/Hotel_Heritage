@@ -94,7 +94,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(205, 210, 222, 0.7);
     z-index: 1;
 }
 
@@ -335,7 +334,7 @@
 
 /*** Testimonial ***/
 .testimonial {
-    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/cover.JPG);
+    background: linear-gradient(rgba(241, 179, 64, 0.7), rgba(240, 192, 35, 0.7)), url(../img/cover.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

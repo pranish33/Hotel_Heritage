@@ -83,20 +83,16 @@
 
 
         <!-- HomePage -->
-        <div class="container-fluid p-0 mb-5">
-            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="w-100" src="{% static 'img/cover.jpg' %}" alt="Image">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="active">
+                        <img class="w-100" src="{% static 'img/cover.jpg' %}" alt="">
+                        <div class="carousel-caption align-items-left justify-content-left mt-5 p-5">
                             <div class="p-40px" style="max-width: 700px;">
-                                <h2 class="display-3 text-white mb-2 animated slideInDown">Welcome To </h2>
-                                <h1 class="display-3 text-white mb-4 animated slideInDown">Rolpa Heritage Hotel</h1>
-                                <h3 class="h3 text-white animated slideInDown" style>Your hospitality partner in Rolpa </h3>
+                                <h2 class="display-3 text-primary mb-2 animated slideInDown">Welcome To </h2>
+                                <h1 class="display-3 text-primary mb-4 animated slideInDown">Rolpa Heritage Hotel</h1>
+                                <h3 class="h3 text-primary animated slideInDown" style>Your hospitality partner in Rolpa </h3>
                                 <style>
                                     .h3{
-                                        font-family:cursive;
-                                    }
+                                        font-family:cursive;           
                                     
                                     </style>
                                 
@@ -104,17 +100,14 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-        </div>
         <!-- HomePage End End -->
 
 
         <!-- About Start -->
         <section class="about" id="about">
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5 mt-5">
             <div class="container">
-                <div class="row g-5 align-items-center">
+                <div class="row g-5 align-items-center mt-5">
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Hotel Rolpa Heritage</span></h1>
@@ -182,10 +175,9 @@
         
 <!-- Gallery -->
 <section class="rooms" id="rooms">
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5 mt-5 auto">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title text-center text-primary text-uppercase">Our Gallery</h6>
                 <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Gallery</span></h1>
             </div>
     </div>
@@ -206,10 +198,10 @@
 
         <!-- Service Start -->
         <section class="service" id="services">
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5 mt-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Services</h6>
+                  
                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Services</span></h1>
                 </div>
                 <div class="row g-4">
@@ -297,22 +289,56 @@
 
 
         <!-- Testimonial Start -->
+        
         <section class="testimonials" id="testimonials">
                     <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Clients</h6>
-                    <h1 class="mb-5">We have <span class="text-primary text-uppercase">Served</span></h1>
+                <div class="container-xxl py-5">
+                    <div class="container">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">      
+                            <h1 class="mb-5 mt-5">Our Special Guests <span class="text-primary text-uppercase">From</span></h1>
+                        </div>
+                        <div class="row ml-5 px-5 align-items-center">
+                            <div class="col-lg-4 col-md-8 ml-8">
+                                    <div class="col-lg-4 p-1 align-items-center justify-content-center">
+                                        <div class="align-items-center justify-content-center">
+                                            <img class="img-fluid mt-20" src="{% static 'img/j-embassy.png' %}" alt="Image">
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-2 mt-3">Japan Embassy</h5> 
+                            </div>
+                            <div class="col-lg-4 col-md-8">
+                                    <div class="col-lg-4 p-1 align-items-center justify-content-center">
+                                        <div class="align-items-center justify-content-center">
+                                            <img class="img-fluid mt-20" src="{% static 'img/germany.png' %}" alt="Image">
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-3 mt-3">Germany Embassy</h5>
+                                
+                            </div>
+                            <div class="col-lg-4 col-md-8">
+                                    <div class="col-lg-4 p-1 align-items-center justify-content-center">
+                                        <div class="align-items-center justify-content-center">
+                                            <img class="img-fluid mt-20" src="{% static 'img/india.gif' %}" alt="Image">
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-3 mt-3">Indian Embassy</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="row g-4">
+                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                        <h3 class="mb-5">We also <span class="text-primary text-uppercase">Served</span></h3>
+                    </div>
                     
-        <div class="container-xxl testimonial my-2 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+       
             
-            <div class="container">
+            <div class="container pl-5">
                 
                 <div class="owl-carousel testimonial-carousel py-8">
                     {% for client_image in client_images %}
-                    <div class="testimonial-item position-relative bg-white overflow-hidden ">
+                    <div class="testimonial-item position-relative overflow-hidden ">
                         
                         <div class="d-flex align-items-center">
                             <img class="flex-shrink-0 rounded" 
@@ -326,8 +352,6 @@
                 </div>
                
             </div>
-           
-        </div>
         
     </section>
         <!-- Testimonial End -->
@@ -336,7 +360,7 @@
         <!-- Team Start -->
         <section class="teams" id="teams">
             <div class="container-fluid py-100 ">
-                <div class="container">
+                <div class="container mt-5">
                     <div class="row align-items-center">
                         <div class="col-lg-5 pb-4 pb-lg-0">
                             <img class="img-fluid w-100 mt-20" src="{% static 'img/founder.jpg' %}" alt="">
